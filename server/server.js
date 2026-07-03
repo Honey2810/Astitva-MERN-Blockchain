@@ -18,10 +18,9 @@ const app = express();
 app.use(cors({
   origin: [
     "https://astitva-beta.vercel.app",
+    "https://astitva-mern-blockchain.vercel.app",
     "http://localhost:5173"
   ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 
