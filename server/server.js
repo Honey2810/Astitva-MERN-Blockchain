@@ -15,7 +15,15 @@ connectDB();
 const app = express();
 
 // Standard middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://astitva-beta.vercel.app",
+      "http://localhost:5173"
+    ],
+    credentials: true
+  })
+);
 app.use(express.json()); // Allows parsing of application/json request bodies
 
 // Mount API routes
